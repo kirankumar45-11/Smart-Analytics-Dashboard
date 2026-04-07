@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="logo">InsightX</div>
+
+  <div class="menu">
+    <div class="menu-item active">Dashboard</div>
+    <div class="menu-item">Reports</div>
+    <div class="menu-item">Analytics</div>
+    <div class="menu-item">Settings</div>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <div class="topbar">
+    <h2 id="pageTitle">Dashboard</h2>
+
+    <div class="actions">
+      <button onclick="toggleDark()">🌙</button>
+      <button onclick="toggleQuery()">Show Query</button>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="cards">
+    <div class="card"><h3>Revenue</h3><p>$52,340</p></div>
+    <div class="card"><h3>Users</h3><p>1,842</p></div>
+    <div class="card"><h3>Orders</h3><p>764</p></div>
+    <div class="card"><h3>Growth</h3><p>+18%</p></div>
+  </div>
+
+  <!-- Charts -->
+  <div class="charts">
+    <div class="chart-box">
+      <h3>Sales Overview</h3>
+      <canvas id="barChart"></canvas>
+    </div>
+
+    <div class="chart-box">
+      <h3>Traffic Sources</h3>
+      <canvas id="pieChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Query -->
+  <div class="query" id="queryBox">
+    SELECT * FROM sales WHERE month='July';
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
